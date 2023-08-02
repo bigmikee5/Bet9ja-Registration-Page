@@ -161,6 +161,7 @@ function validateDateOfBirth() {
 
   // Convert the input date to a Date object
   const dobDate = new Date(dobInput);
+  dobDate.max = new Date().toISOString().split("T")[0];
   // Validate if the date is a valid date
   if (isNaN(dobDate)) {
     sideMessage.innerHTML = '<i class="bx bxs-error-circle"></i> ';
