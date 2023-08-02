@@ -1,0 +1,536 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+header a {
+  text-decoration: none;
+  color: #fff;
+}
+.nav {
+  background: #373a45;
+  margin: 0 50px;
+  padding: 0.85rem 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.logo {
+  font-size: 4rem;
+  font-weight: 800;
+}
+.logo .bet {
+  color: #d21e20;
+}
+.logo .nja {
+  color: #32aa4c;
+}
+.menu-list {
+  width: 600px;
+  list-style: none;
+  display: flex;
+  justify-content: space-evenly;
+}
+.list-link-items:hover {
+  color: #ffcd00;
+}
+
+/* main styles */
+main {
+  height: 100vh;
+  font-family: Geneva, Tahoma, sans-serif;
+  position: relative;
+  margin-bottom: 14rem;
+}
+.sign-up {
+  position: absolute;
+  left: 41.8rem;
+  top: -1.5rem;
+  font-size: 14px;
+}
+.sign-up a {
+  text-decoration: none;
+  color: #4b6be7;
+  font-weight: 600;
+}
+
+/* progressbar */
+.progressbar {
+  position: relative;
+  left: 4rem;
+  top: 1.5rem;
+  display: flex;
+  gap: 5rem;
+}
+.progressbar::before,
+.progress {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 4px;
+  width: 56%;
+  background: #dcdcdc;
+}
+.progress {
+  width: 0%;
+  background: #32aa4c;
+}
+.progress-step::after {
+  content: attr(data-title);
+  position: absolute;
+  top: 1.6rem;
+  margin-left: -0.9rem;
+}
+.progress-step {
+  width: 1.2rem;
+  height: 1.2rem;
+  background-color: #32aa4c;
+  border-radius: 50%;
+  z-index: 1;
+  background-image: url(icons8-check-30.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+/* form */
+.form {
+  margin: 5rem 40rem 0 20rem;
+  box-shadow: 0px 2px 2px 2px rgba(0, 0, 0, 0.15);
+  padding: 70px 100px;
+}
+h1 {
+  text-align: center;
+}
+.form-step {
+  display: none;
+}
+.form-step-active {
+  margin-top: 100px;
+  display: block;
+}
+.input-group {
+  margin: 20px;
+}
+label {
+  display: block;
+  margin-bottom: 10px;
+}
+input {
+  width: 87%;
+  padding: 7px;
+  outline: 0;
+}
+.insight-message {
+  display: block;
+  font-size: 10px;
+  border: 0;
+  background: #e3effa;
+  padding: 8px 10px;
+  width: 87%;
+}
+.sideMessage {
+  margin-left: 10px;
+  margin-top: 18px;
+}
+.bx {
+  font-size: 26px;
+}
+.bxs-error-circle {
+  color: #d21e20;
+}
+.bxs-check-circle {
+  color: #32aa4c;
+}
+.btns-group {
+  background: #32aa4c;
+  width: 78%;
+  text-align: center;
+  padding: 10px;
+  margin-left: 20px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+.btn {
+  color: #fff;
+  text-decoration: none;
+}
+.go-back {
+  position: absolute;
+  top: 0.5rem;
+  left: 21rem;
+}
+.go-back a {
+  text-decoration: none;
+  color: #4b6be7;
+  font-weight: 500;
+}
+.passwordInput {
+  display: inline-block;
+  width: 87%;
+  position: relative;
+  border: 1px solid #ccc;
+  padding: 2px;
+}
+.passwordInput input {
+  width: 70%;
+  border: 0;
+  outline: 0;
+}
+.showHidePassword {
+  position: absolute;
+  top: 0.4rem;
+  right: 0.4rem;
+}
+#state {
+  width: 87%;
+  padding: 8px;
+  outline: 0;
+}
+.eula {
+  width: 87%;
+  font-size: 12px;
+  margin-bottom: 40px;
+}
+.eula a {
+  color: #4b6be7;
+}
+.change-number {
+  font-size: 15px;
+  margin: 60px 0;
+  text-align: center;
+  line-height: 1.9;
+}
+.change-number a {
+  color: #32aa4c;
+  font-weight: 800;
+}
+.otp-group {
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 100px;
+}
+.otps {
+  width: 60px;
+  height: 70px;
+  border-radius: 10px;
+  background: #ddd;
+  padding-left: 23px;
+}
+.otp-request {
+  margin: 40px 0;
+  font-size: 15px;
+  text-align: center;
+}
+.otp-request a {
+  color: #32aa4c;
+  font-weight: bold;
+}
+.support {
+  width: 250px;
+  text-align: center;
+  margin: 30px 0 0 40px;
+  line-height: 1.6;
+  font-size: 13px;
+}
+
+.support a {
+  color: #32aa4c;
+  font-weight: 800;
+}
+#btn-step-1-error {
+  margin-left: 5rem;
+  color: #d21e20;
+  font-size: 13px;
+}
+#btn-step-2-error {
+  margin-left: 5rem;
+  color: #d21e20;
+  font-size: 13px;
+}
+#submitForm {
+  margin-left: 5rem;
+  color: #d21e20;
+  font-size: 13px;
+}
+.banner {
+  display: none;
+}
+.bx-left-arrow-alt {
+  display: none;
+}
+.successMessage {
+  width: 300px;
+  background: #fff;
+  padding: 50px;
+  display: none;
+  margin-top: 40px;
+  margin-left: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.3);
+}
+.successMessage .bx-check-circle {
+  color: #32aa4c;
+  margin-left: 0px;
+  margin-bottom: 30px;
+  font-size: 40px;
+}
+.successMessage p {
+  line-height: 1.5;
+}
+footer {
+  background: #373a45;
+  margin: 20px 40px 0 40px;
+  border-radius: 5px;
+  height: 30vh;
+}
+footer h2 {
+  color: #fff;
+  margin-left: 50px;
+  padding-top: 10px;
+}
+footer .menuItems {
+  list-style: none;
+}
+footer a {
+  text-decoration: none;
+  color: #32aa4c;
+  font-weight: lighter;
+}
+footer .footerMenu {
+  display: flex;
+  align-items: center;
+  gap: 38rem;
+  margin-left: 40px;
+  margin-top: 30px;
+}
+footer .navLeft {
+  display: flex;
+  gap: 4rem;
+}
+footer .navRight {
+  display: flex;
+  gap: 2rem;
+}
+footer .bx {
+  font-size: 60px;
+}
+.mobile {
+  display: none;
+}
+/* media */
+
+@media screen and (max-width: 768px) {
+  /* CSS rules for mobile devices */
+  main {
+    overflow: hidden;
+    position: unset;
+  }
+  header {
+    background: #373a45;
+    height: 26vh;
+    font-family: sans-serif;
+    position: relative;
+  }
+  .menu {
+    display: none;
+  }
+  .banner {
+    display: block;
+  }
+
+  .logo {
+    font-size: 1.2rem;
+    font-weight: 800;
+    margin-left: 80px;
+  }
+  .intro {
+    width: 200px;
+    color: #fae613;
+    font-size: 13px;
+    margin: 10px 40px;
+    line-height: 1.4;
+  }
+  .rank {
+    font-size: 10px;
+    margin: 10px 40px;
+    color: #fff;
+  }
+  header button {
+    margin: 0 40px;
+    background: #fae613;
+    padding: 6px;
+    font-size: 10px;
+    font-weight: 800;
+    border: 0;
+    outline: 0;
+    border-radius: 2px;
+  }
+  /* main styles */
+  .sign-up {
+    display: none;
+  }
+
+  /* progressbar */
+  .progressbar {
+    gap: 3.9rem;
+    left: 5rem;
+    margin-bottom: -35px;
+  }
+  .progress-step::after {
+    margin-left: -0.5rem;
+    font-size: 12px;
+  }
+  /* form */
+  .form {
+    margin: 0 4rem 0 1rem;
+    box-shadow: none;
+    padding: 20px 1px;
+  }
+  h1 {
+    font-size: 18px;
+    margin-left: 60px;
+  }
+  .input-group {
+    margin: 10px 5px;
+    width: 350px;
+  }
+  .fieldset {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+  label {
+    margin-bottom: 10px;
+    margin-left: 17px;
+  }
+  input {
+    width: 80%;
+  }
+  .insight-message {
+    margin-left: 1rem;
+    width: 80%;
+  }
+  .btns-group {
+    width: 97%;
+    margin-left: 15px;
+  }
+  .go-back {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    z-index: 999;
+    font-size: 10px;
+    display: flex;
+    align-items: center;
+  }
+  .go-back a {
+    font-weight: 800;
+    color: #fff;
+  }
+  .passwordInput {
+    height: 37px;
+    width: 80%;
+    border: 1.8px solid #ccc;
+    padding: 2px;
+    margin-left: 0;
+  }
+  .passwordInput input {
+    width: 70%;
+    border: 0;
+    outline: 0;
+  }
+  .showHidePassword {
+    position: absolute;
+    top: 0.4rem;
+    right: 0.4rem;
+  }
+  .stateDiv {
+    width: 85%;
+  }
+  #state {
+    width: 96%;
+    margin-right: 60px;
+    padding: 8px;
+    outline: 0;
+    margin-left: 9px;
+  }
+  .eula {
+    width: 87%;
+    font-size: 12px;
+    margin-bottom: 10px;
+    margin-left: 15px;
+  }
+  .otp-group {
+    margin-left: 30px;
+    margin-bottom: -20px;
+  }
+  .otp-request {
+    margin-left: 20px;
+    font-size: 13px;
+  }
+  .support {
+    width: 250px;
+    text-align: center;
+    margin: 30px 0 0 20px;
+    line-height: 1.6;
+    font-size: 13px;
+  }
+  .bx-left-arrow-alt {
+    display: block;
+    font-size: 20px;
+  }
+  .successMessage {
+    margin-top: 70px;
+    padding: 50px;
+    display: none;
+    margin-left: 45px;
+  }
+  .successMessage .bx-check-circle {
+    color: #32aa4c;
+    margin-left: 40px;
+    margin-bottom: 30px;
+    font-size: 40px;
+  }
+  .successMessage p {
+    line-height: 1.5;
+  }
+  .desktop {
+    display: none;
+  }
+  .mobile {
+    display: block;
+  }
+  footer {
+    background: #373a45;
+    margin: 0;
+    border-radius: 5px;
+    height: 40vh;
+    margin-top: -12rem;
+  }
+  .footerHead {
+    display: flex;
+    align-items: start;
+    gap: 10rem;
+    padding-top: 20px;
+  }
+  .footerHead .bx {
+    color: #fff;
+    font-size: 20px;
+  }
+  .mobileFooterMenu {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 3rem;
+  }
+  .mobileFooterMenu li {
+    list-style: none;
+    margin-top: 8px;
+  }
+  hr {
+    width: 300px;
+    margin-top: 15px;
+    margin-left: 25px;
+  }
+}

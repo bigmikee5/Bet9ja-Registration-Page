@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bet9ja Registration</title>
+    <link rel="stylesheet" href="styles.css" />
+    <!-- favicon -->
+    <link rel="icon" href="favicon.png" />
+    <!-- icon -->
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- header section  -->
+    <header id="top">
+      <nav class="nav">
+        <div class="logo">
+          <a href="#" class="logo-link"
+            ><span class="bet">bet</span><span class="nja">9ja</span></a
+          >
+        </div>
+        <div class="menu">
+          <ul class="menu-list">
+            <li class="list-items">
+              <a href="#" class="list-link-items">Sports</a>
+            </li>
+            <li class="list-items">
+              <a href="#" class="list-link-items">Live</a>
+            </li>
+            <li class="list-items">
+              <a href="#" class="list-link-items">Casino</a>
+            </li>
+            <li class="list-items">
+              <a href="#" class="list-link-items">Live Casino</a>
+            </li>
+            <li class="list-items">
+              <a href="#" class="list-link-items">League&Races</a>
+            </li>
+            <li class="list-items">
+              <a href="#" class="list-link-items">Virtual</a>
+            </li>
+            <li class="list-items">
+              <a href="#" class="list-link-items">Lotto</a>
+            </li>
+            <li class="list-items">
+              <a href="#" class="list-link-items">Super9ja</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <!-- banner for mobile design -->
+      <div class="banner">
+        <p class="intro">BEST SPORTS MARKETS, CASINO GAMES AND VIRTUALS</p>
+        <p class="rank">NIGERIA'S NUMBER ONE SPORTSBOOK</p>
+        <button type="button">JOIN NOW</button>
+      </div>
+    </header>
+    <!-- main content -->
+    <main>
+      <div class="container">
+        <div class="sign-up">
+          Already have an account? <a href="#">Sign up</a>
+        </div>
+        <form action="#" class="form">
+          <h1>Open Account</h1>
+          <!-- progress bar-->
+          <div class="progressbar">
+            <div class="progress" id="progress"></div>
+            <div class="progress-step" data-title="STEP 1"></div>
+            <div class="progress-step" data-title="STEP 2"></div>
+            <div class="progress-step" data-title="STEP 3"></div>
+          </div>
+          <!-- steps -->
+          <div class="form-step form-step-active">
+            <div class="input-group">
+              <label for="email">Email</label>
+              <div class="fieldset">
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  onkeyup="validateEmail()"
+                /><span class="sideMessageEmail"> </span>
+              </div>
+              <span class="insight-message emailError"
+                >A valid email is required to register and withdraw funds</span
+              >
+            </div>
+            <div class="input-group">
+              <label for="Fname">First Name</label>
+              <div class="fieldset">
+                <input
+                  type="text"
+                  name="Fname"
+                  id="Fname"
+                  onkeyup="validateFname()"
+                /><span class="sideMessageFname"> </span>
+              </div>
+              <span class="insight-message FnError"
+                >Enter your First Name as it appears in your bank account.</span
+              >
+            </div>
+            <div class="input-group">
+              <label for="sname">Surnaame</label>
+              <div class="fieldset">
+                <input
+                  type="text"
+                  name="sname"
+                  id="sname"
+                  onkeyup="validateSname()"
+                /><span class="sideMessageSname"> </span>
+              </div>
+              <span class="insight-message SnError"
+                >Enter your Surname as it appears in your bank account.</span
+              >
+            </div>
+            <div class="input-group">
+              <label for="dot">Date of birth</label>
+              <div class="fieldset">
+                <input
+                  type="date"
+                  name="dot"
+                  id="dot"
+                  onchange="validateDateOfBirth()"
+                />
+                <span class="sideMessage"></span>
+              </div>
+              <span class="dobError"></span>
+            </div>
+            <div class="input-group">
+              <label for="promotion">Promotional Code (optional)</label>
+              <div class="fieldset">
+                <input
+                  type="text"
+                  name="promotion"
+                  id="promotion"
+                  style="margin-right: 10px"
+                />
+                <span></span>
+              </div>
+            </div>
+            <div class="btns-group btn-step-1" onclick="validateStepOne()">
+              <a href="#" class="btn btn-continue">Continue</a>
+            </div>
+            <span id="btn-step-1-error"></span>
+          </div>
+          <div class="form-step">
+            <div class="btn go-back">
+              <i class="bx bx-left-arrow-alt"></i>
+              <a href="#" class="btn-back">Go Back</a>
+            </div>
+            <div class="input-group">
+              <label for="uname">Create a username</label>
+              <div class="fieldset">
+                <input
+                  type="text"
+                  name="uname"
+                  id="uname"
+                  onkeyup="validateUsername()"
+                /><span class="sideMessage user"> </span>
+              </div>
+              <span class="insight-message username"
+                >You can use letters and numbers only.</span
+              >
+            </div>
+            <div class="input-group">
+              <label for="password">Choose a password</label>
+              <div class="fieldset">
+                <div class="passwordInput">
+                  <input
+                    type="password"
+                    name="password"
+                    id="password"
+                    onkeyup="validatePassword()"
+                  />
+                  <span
+                    class="showHidePassword"
+                    onclick="togglePasswordVisibility()"
+                  >
+                    <i class="bx bx-hide hide" style="font-size: 20px"></i>
+                    <i
+                      class="bx bx-show show"
+                      style="font-size: 20px; display: none"
+                    ></i>
+                  </span>
+                </div>
+                <span class="sideMessage userPassword"> </span>
+              </div>
+              <span class="insight-message password"
+                >You can use letters, numbers and symbols.</span
+              >
+            </div>
+            <div class="input-group">
+              <label for="state">State</label>
+              <div class="fieldset state">
+                <div class="stateDiv">
+                  <select id="state" name="state" onchange="validateState()">
+                    <option value="">Select state of residence</option>
+                    <option value="Abuja FCT">Abuja FCT</option>
+                    <option value="Abia">Abia</option>
+                    <option value="Adamawa">Adamawa</option>
+                    <option value="Akwa Ibom">Akwa Ibom</option>
+                    <option value="Anambra">Anambra</option>
+                    <option value="Bauchi">Bauchi</option>
+                    <option value="Bayelsa">Bayelsa</option>
+                    <option value="Benue">Benue</option>
+                    <option value="Borno">Borno</option>
+                    <option value="Cross River">Cross River</option>
+                    <option value="Delta">Delta</option>
+                    <option value="Ebonyi">Ebonyi</option>
+                    <option value="Edo">Edo</option>
+                    <option value="Ekiti">Ekiti</option>
+                    <option value="Enugu">Enugu</option>
+                    <option value="Gombe">Gombe</option>
+                    <option value="Imo">Imo</option>
+                    <option value="Jigawa">Jigawa</option>
+                    <option value="Kaduna">Kaduna</option>
+                    <option value="Kano">Kano</option>
+                    <option value="Katsina">Katsina</option>
+                    <option value="Kebbi">Kebbi</option>
+                    <option value="Kogi">Kogi</option>
+                    <option value="Kwara">Kwara</option>
+                    <option value="Lagos">Lagos</option>
+                    <option value="Nassarawa">Nasarawa</option>
+                    <option value="Niger">Niger</option>
+                    <option value="Ogun">Ogun</option>
+                    <option value="Ondo">Ondo</option>
+                    <option value="Osun">Osun</option>
+                    <option value="Oyo">Oyo</option>
+                    <option value="Plateau">Plateau</option>
+                    <option value="Rivers">Rivers</option>
+                    <option value="Sokoto">Sokoto</option>
+                    <option value="Taraba">Taraba</option>
+                    <option value="Yobe">Yobe</option>
+                    <option value="Zamfara">Zamfara</option>
+                  </select>
+                </div>
+                <span class="sideMessage userState"> </span>
+              </div>
+              <span
+                class="insight-message stateMessage"
+                style="background: none"
+              ></span>
+            </div>
+            <div class="input-group">
+              <label for="number">Mobile Number</label>
+              <div class="fieldset">
+                <input
+                  type="tel"
+                  name="number"
+                  id="number"
+                  onkeyup="validatePhoneNumber()"
+                />
+                <span class="sideMessage number"> </span>
+              </div>
+              <span
+                class="insight-message numberMessage"
+                style="background: none"
+              ></span>
+            </div>
+            <div class="eula">
+              By creating an account you agree to accept our
+              <a href="#">T&C's</a>, are over 18 and are aware of our
+              <a href="#">Responsible Gaming Policy</a>
+            </div>
+            <div class="btns-group btn-step-2" onclick="validateStepTwo()">
+              <a href="#" class="btn btn-continue">Continue</a>
+            </div>
+            <span id="btn-step-2-error"></span>
+          </div>
+          <div class="form-step otpDiv">
+            <div class="btn go-back">
+              <i class="bx bx-left-arrow-alt"></i>
+              <a href="#" class="btn-back">Go Back</a>
+            </div>
+            <div class="change-number">
+              Please enter the 4-digit OTP code we have sent to:
+              <span class="phone-number"></span>.
+              <a href="#" class="wrong-number">Wrong Number?</a>
+            </div>
+            <div class="otp-group">
+              <input type="text" class="otps" /><input
+                type="text"
+                class="otps"
+              /><input type="text" class="otps" /><input
+                type="text"
+                class="otps"
+              />
+            </div>
+            <span id="submitForm"></span>
+            <div class="otp-request" id="resendOTP">
+              Didn't receive the OTP code? <a href="#">Resend OTP</a>
+            </div>
+            <div class="btns-group btn-submit">
+              <a href="#" class="btn btn-continue">Verify and Create Account</a>
+            </div>
+            <div class="support">
+              Still having trouble ? Please contact our
+              <a href="#">Customer Support</a>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="successMessage">
+        <i class="bx bx-check-circle"></i>
+        <p>Congratulations, Registration Successful</p>
+      </div>
+    </main>
+    <footer>
+      <div class="desktop">
+        <h2>BET9JA</h2>
+        <div class="footerMenu">
+          <div class="navLeft">
+            <div class="navv">
+              <ul class="menuList">
+                <li class="menuItems">
+                  <a href="#" class="menuListLink">Home</a>
+                </li>
+                <li class="menuItems">
+                  <a href="#" class="menuListLink">About Us</a>
+                </li>
+                <li class="menuItems">
+                  <a href="#" class="menuListLink">Become an Agent</a>
+                </li>
+                <li class="menuItems">
+                  <a href="#" class="menuListLink">Contact us</a>
+                </li>
+                <li class="menuItems">
+                  <a href="#" class="menuListLink">Results</a>
+                </li>
+                <li class="menuItems">
+                  <a href="#" class="menuListLink">Web Affiliates</a>
+                </li>
+                <li class="menuItems">
+                  <a href="#" class="menuListLink">Apps</a>
+                </li>
+              </ul>
+            </div>
+            <div class="privacy">
+              <ul class="menuList">
+                <li class="menuItems">
+                  <a href="#" class="menuListLink">Home</a>
+                </li>
+                <li class="menuItems">
+                  <a href="#" class="menuListLink">Terms and Conditions</a>
+                </li>
+                <li class="menuItems">
+                  <a href="#" class="menuListLink">Responsible Gambling</a>
+                </li>
+                <li class="menuItems">
+                  <a href="#" class="menuListLink">Privacy</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="navRight">
+            <div>
+              <a href="#" class=""><i class="bx bxl-facebook-circle"></i></a>
+            </div>
+            <div>
+              <a href="#" class=""><i class="bx bxl-twitter"></i></a>
+            </div>
+            <div>
+              <a href="#" class=""><i class="bx bxl-instagram"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="mobile">
+        <div class="footerHead">
+          <div class="logo" style="font-size: 29px">
+            <a href="#" class="logo-link"
+              ><span class="bet">bet</span><span class="nja">9ja</span></a
+            >
+          </div>
+          <div class="topLink">
+            <a href="#top"> <i class="bx bx-up-arrow-alt"></i></a>
+          </div>
+        </div>
+        <hr />
+        <div class="mobileFooterMenu">
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About us</a></li>
+            <li><a href="#">Contact us</a></li>
+          </ul>
+          <ul>
+            <li><a href="#">Terms and Conditions</a></li>
+            <li><a href="#">Responsible and Gambling</a></li>
+            <li><a href="#">Privacy</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
